@@ -1,0 +1,149 @@
+           * {
+                padding: 0;
+                margin: 0;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            header {
+                background-color: #22438C;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+            }
+            .helptext {
+                font-size: 0.9em;  /* Tamanho da fonte menor */
+                color: #6c757d;    /* Cor mais clara */
+            }
+
+            .nav-ul-custom {
+                list-style: none;
+                background: #22438C;
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-ul-custom li {
+                display: inline-block;
+                position: relative;
+            }
+
+            .nav-ul-custom li a {
+                display: block;
+                padding: 20px 25px;
+                width: 90px;
+                color: #FFF;
+                text-decoration: none;
+                text-align: center;
+                font-size: 20px;
+            }
+            .nav-ul-custom li:nth-last-child(2) {
+                margin-left: auto;
+            }
+            .nav-ul-custom li.username {
+                color: #FFF;
+                padding: 20px 25px;
+                font-size: 20px;
+            }
+            {
+                display: block;
+                padding: 20px 25px;
+                width: 90px;
+                color: #FFF;
+                text-decoration: none;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .nav-ul-custom li ul.dropdown {
+                width: 100%;
+                background: #22438C;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 999;
+                display: none;
+            }
+
+            .nav-ul-custom li:hover ul.dropdown {
+                display: block;
+            }
+
+            .nav-ul-custom li a:hover {
+                background: #112C66;
+            }
+            /* Estilo base para o botão */
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #5AB2A6; /* Cor de fundo do botão */
+                color: #fff; /* Cor do texto do botão */
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                margin: 5px; /* Margem entre os botões */
+            }
+
+            /* Estilo para o botão quando hover */
+            .button:hover {
+                background-color: #468B82; /* Cor de fundo do botão ao passar o mouse */
+            }
+
+            ul.buttons {
+              list-style-type: none;
+            }
+
+            .data_button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #9B9C71; /* Cor de fundo do botão */
+                color: #fff; /* Cor do texto do botão */
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                margin: 5px; /* Margem entre os botões */
+                width: 20%;
+
+            }
+
+            /* Estilo para o botão quando hover */
+            .data_button:hover {
+                background-color: #757557; /* Cor de fundo do botão ao passar o mouse */
+            }
+            .styled-button {
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #3b5ca3; /* Soft teal color */
+                color: #fff; /* White text color */
+                text-decoration: none;
+                border: none;
+                border-radius: 8px; /* Rounded corners */
+                font-size: 16px; /* Font size */
+                cursor: pointer;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            }
+
+
+            .styled-button:hover {
+                background-color: #76B2B1; /* Slightly darker teal color for hover */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+            }
+
+
+            .styled-button:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Teal outline for focus */
+            }
+            .button-container {
+                padding: 20px; /* Add padding to prevent touching the edges */
+                 /* Center the button horizontally */
+            }
+
+
+            section {
+                padding: 20px;
+                margin: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }

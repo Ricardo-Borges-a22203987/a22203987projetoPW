@@ -1,0 +1,53 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h3>{{ musica }}</h3>
+
+
+
+    <br>
+    <div class="time-container">
+        <p> Duracao: {{ musica.duracao }}</p>
+    </div>
+
+
+
+    {%if musica.biografia%}
+        <div class="bio-container">
+            <strong>Biografia:</strong>
+            <p>{{ musica.biografia }}</p>
+        </div>
+    {% endif %}
+    {%if musica.letra %}
+        <div class="lyrics-container">
+            <strong>Letra:</strong>
+            <p>{{ musica.letra }}</p>
+        </div>
+    {% endif %}
+    <a href="{{ musica.spotify }}" target="_blank" class="box-link-button">
+        <div class="box-hyperLink-social">
+                <div class="content">
+                    <div class="title">Spotify</div>
+                </div>
+                <div class="social-logo ">
+                    <i class='bx bxl-spotify'></i>
+                </div>
+        </div>
+    </a>
+
+
+
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'bandasapp:edita_musica' musica.id %}">
+            <button class="styled-button">Editar Musica</button>
+        </a>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'bandasapp:apaga_musica' musica.id %}">
+            <button class="styled-button-delete">Apagar Musica</button>
+        </a>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <style>
+        body {
+            background-color: #9370DB;
+        }
+        a {
+            color: white; /* Definindo a cor do texto do link como branco */
+
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>OSU!</h1>
+        <hr>
+        <p style="color: white;"> The best rhythm game </p>
+        <nav>
+            <a href="{% url 'osu:prometheus' %}">Prometheus</a>
+            <p></p>
+            <a href="{% url 'osu:about' %}">Sobre</a>
+        </nav>
+
+    </div>
+    <footer>
+        <p style="color: white;">&copy;a22203987 Ricardo Borges</p>
+    </footer>
+</body>
+</html>

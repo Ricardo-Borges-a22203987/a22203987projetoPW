@@ -1,0 +1,18 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <p>Lista de géneros:</p>
+    <ul>
+    {% for genero in generos %}
+        <a href="{% url 'bandasapp:genero' genero %}" class="box-link">
+            <div class="box-no-icon">
+                <div class="content">
+                    <div class="title">{{genero}}</div>
+
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+    </ul>
+{% endblock %}
+

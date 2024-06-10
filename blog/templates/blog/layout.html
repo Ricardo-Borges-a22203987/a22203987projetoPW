@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Blog</title>
+        <style>
+            body {
+                background-color: white;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                height:auto;
+            }
+            .container {
+                width: 700px; /* largura do contêiner */
+                padding: 10px; /* espaço interno */
+            }
+
+            .condensed-text {
+                overflow-wrap: break-word; /* quebra o texto para caber na largura do contêiner */
+            }
+            header {
+    background-color: #3b5998;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+header a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header button {
+    background-color: #fff;
+    border: none;
+    color: #3b5998;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 10px 20px;
+}
+
+header button:hover {
+    background-color: #e7e7e7;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+/* Course list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul p {
+    margin: 5px 0;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+ul a button {
+    background-color: #3b5998;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+ul a button:hover {
+    background-color: #3b5998;
+}
+
+/* Footer styling */
+footer {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+button {
+    background-color: #3b5998;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 10px 20px;
+}
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Blog</h1>
+            <a href="{% url 'blogapp:home' %}"><button>Home</button></a>
+
+
+        </header>
+
+        <main>
+
+            {% block content %}
+            {% endblock %}
+
+            {% if request.user.is_authenticated %}
+                <p></p>
+                Username:{{request.user.username}}
+                <p></p>
+                <a href="{% url 'logout' %}"><button>Logout</button></a>
+            {% else %}
+                <a href="{% url 'login' %}"><button>Login</button></a>
+            {% endif %}
+
+        </main>
+
+        <footer>
+            <p>Universidade Lusófona, a22203987</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Web</title>
+    <style>
+        body {
+            background: coral;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interesses Programação Web</h1>
+        <nav>
+            <a href="{% url 'pwsite:index' %}">Introducao</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Construindo o Futuro da Web</h2>
+        <p>Neste curso, espero adquirir todos os conhecimentos necessarios para fazer sites avançados</p>
+
+
+    </main>
+
+    <footer>
+        <p>&copy;{{ current_datetime }}  Programação Web, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

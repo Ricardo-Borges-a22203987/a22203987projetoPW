@@ -1,0 +1,13 @@
+{% extends 'imagesApp/layout.html' %}
+
+{% block content %}
+    <p>Existem {{ bandas|length }} bandas:</p>
+    <ul>
+    {% for banda in bandas %}
+        <li>
+            <p>{{ banda }}</p>
+            <img src="{{ banda.foto_banda.url }}" width="150px">
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

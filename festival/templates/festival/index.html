@@ -1,0 +1,12 @@
+{% extends 'festival/layout.html' %}
+
+{% block content %}
+    <ul>
+    {% for festival in festivais %}
+        <li>
+            <a href="{% url 'festivalapp:festival' festival.id %}">{{ festival }}</a>
+            <p></p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

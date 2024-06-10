@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores e Combinadores CSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .material-icons {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Seletores CSS</h3>
+    <p>CSS (Cascading Style Sheets) é uma linguagem de estilo utilizada para descrever a apresentação de um documento escrito em HTML ou XML.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Seletor</th>
+                <th>Usado</th>
+                <th>Comentário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Seletor de Elemento</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos pelo nome da tag. Utilizado para estilizar todos os parágrafos <a href="#link-exemplo1">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Seletor de Classe</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos que possuem um atributo class específico. Utilizado para estilizar botões <a href="#link-exemplo2">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Seletor de ID</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos pelo seu atributo id. Utilizado para estilizar um elemento específico <a href="#link-exemplo3">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Seletor de Atributo</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos com um atributo específico. Utilizado para estilizar links externos <a href="#link-exemplo4">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Seletor Universal</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona todos os elementos. Utilizado para aplicar margens padrão <a href="#link-exemplo5">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Seletor de Pseudo-classe</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos em um estado específico. Utilizado para estilizar links visitados <a href="#link-exemplo6">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Seletor de Pseudo-elemento</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona e estiliza uma parte específica de um elemento. Utilizado para estilizar a primeira letra de parágrafos <a href="#link-exemplo7">nesta página</a>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Combinadores de seletores</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Combinador</th>
+                <th>Usado</th>
+                <th>Comentário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Descendente (espaço)</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos que são descendentes de outro elemento. Utilizado para estilizar parágrafos dentro de divs <a href="#link-exemplo8">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Filho (>)</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos que são filhos diretos de outro elemento. Utilizado para estilizar listas dentro de uma seção <a href="#link-exemplo9">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>Adjacente (+)</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos que são adjacentes a um determinado elemento. Utilizado para estilizar elementos após um header <a href="#link-exemplo10">nesta página</a>.</td>
+            </tr>
+            <tr>
+                <td>General Sibling (~)</td>
+                <td><i class="material-icons">check_circle</i></td>
+                <td>Seleciona elementos que são irmãos de um determinado elemento. Utilizado para estilizar todos os parágrafos após uma div específica <a href="#link-exemplo11">nesta página</a>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

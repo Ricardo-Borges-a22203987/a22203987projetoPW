@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>osu about</title>
+    <style>
+        body {
+            background-color: #87CEEB;
+        }
+        a {
+            color: black; /* Definindo a cor do texto do link como branco */
+
+        }
+        .container {
+            width: 700px; /* largura do contêiner */
+            padding: 10px; /* espaço interno */
+        }
+
+        .condensed-text {
+            overflow-wrap: break-word; /* quebra o texto para caber na largura do contêiner */
+        }
+    </style>
+</head>
+<body>
+       <header>
+            <h1>OSU!</h1>
+            <nav>
+                <a href="{% url 'osu:home' %}">Home</a>
+            </nav>
+        </header>
+        <p></p>
+
+
+         <h2>Descrição</h2>
+    <div class="container">
+        <p class="condensed-text">
+            osu! é um jogo de ritmo gratuito desenvolvido e publicado por Dean Herbert em 2007[2] originalmente para o Microsoft Windows, sendo posteriormente portado para OS X, iOS e Windows Phone.
+        </p>
+
+    </div>
+
+
+        <h2>Jogabilidade</h2>
+    <div class="container">
+        <p class="condensed-text">
+            Existem quatro modos de jogo oficiais: "osu!" (chamado de "osu!standard"), "osu!taiko", "osu!catch" e "osu!mania".
+            Com a adição do osu!lazer, os jogadores agora podem adicionar modos de jogo personalizados ao osu! cliente.
+            O modo osu!standard original continua sendo o mais popular até o momento e em janeiro de 2023, o jogo tinha mais de 19,3 milhões de usuários ativos mensais de acordo com as tabelas de classificação globais dos países do jogo.
+        </p>
+    </div>
+
+      </main>
+
+    <footer>
+        <p style="color: black;">&copy;a22203987 Ricardo Borges</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'curso/layout.html' %}
+
+{% block content %}
+    <ul>
+    {% for curso in cursos %}
+        <h3>{{ curso }}</h3>
+        <p></p>
+        <p>{{ curso.apresentacao }}</p>
+        <p>{{ curso.objetivos }}</p>
+        <p>{{ curso.competencias }}</p>
+        <p></p>
+        {% if request.user.is_authenticated %}
+            <p></p>
+            <a href="{% url 'cursoapp:edita_curso' curso.id %}">
+                <button>Editar informação do Curso</button>
+            </a>
+            <p></p>
+            <a href="{% url 'cursoapp:apaga_curso' curso.id %}">
+                <button>Apagar Curso e tudo relacionado com ele</button>
+            </a>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Festival</title>
+        <style>
+            body {
+                background: khaki;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Festival</h1>
+            <a href="{% url 'festivalapp:home' %}"><button>Home</button></a>
+
+
+        </header>
+
+        <main>
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+        <footer>
+            <p>Universidade Lusófona, a22203987</p>
+        </footer>
+    </body>
+</html>

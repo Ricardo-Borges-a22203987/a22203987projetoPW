@@ -1,0 +1,32 @@
+{% extends 'curso/layout.html' %}
+
+{% block content %}
+    <ul>
+    {% for docente in docentes %}
+        <li>{{ docente }}:</li>
+        <ul>
+            {% for disciplina in docente.disciplinas.all %}
+                <li>{{ disciplina }}</li>
+            {% endfor %}
+        </ul>
+        <p></p>
+        {% if request.user.is_authenticated %}
+            <p></p>
+            <a href="{% url 'cursoapp:apaga_docente' docente.id %}">
+                <button>Apagar Docente</button>
+            </a>
+            <p></p>
+            <a href="{% url 'cursoapp:edita_docente' docente.id %}">
+                <button>Editar informação do Docente</button>
+            </a>
+        {% endif %}
+    {% endfor %}
+     <p>________</p>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'cursoapp:novo_docente' %}">
+            <button>Inserir novo docente</button>
+        </a>
+
+    {% endif %}
+    </ul>
+{% endblock %}

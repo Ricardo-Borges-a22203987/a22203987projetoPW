@@ -1,0 +1,78 @@
+{% extends 'blog/layout.html' %}
+
+{% block content %}
+    <h3>{{ post.title }}</h3>
+
+    <p> Content:</p>
+    <div class="container">
+        <p class="condensed-text">
+            {{ post.content }}
+        </p>
+    </div>
+
+    <p> By: {{ post.author.username }} ({{ post.created_at }})</p>
+
+    <h2>Comments</h2>
+
+    {% for comment in post.comments.all %}
+    <p>_____________</p>
+        <div class="container">
+            <p class="condensed-text">
+                {{ comment.content }}
+            </p>
+            <p> By: {{ comment.author.username }}</p>
+            {%if request.user.is_superuser or request.user == comment.rated_by%}
+                <a href="{% url 'blogapp:edita_comment' comment.id %}">
+                    <button>Editar informação do Comment</button>
+                </a>
+                <p></p>
+                <a href="{% url 'blogapp:apaga_comment' comment.id %}">
+                    <button>Apagar comment</button>
+                </a>
+            {% endif %}
+
+        </div>
+
+
+    {% endfor %}
+    <p>_____________</p>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'blogapp:novo_comment' post.id %}">
+            <button>Inserir novo Comment</button>
+        </a>
+    {% endif %}
+
+    <h2>Ratings</h2>
+
+    {% for rating in post.ratings.all %}
+    <p>_____________</p>
+        <div class="container">
+            <p class="condensed-text">
+                {{ rating }}
+            </p>
+            {% if request.user.is_authenticated %}
+                {%if request.user.is_superuser or request.user == rating.rated_by%}
+                    <a href="{% url 'blogapp:edita_rating' rating.id %}">
+                        <button>Editar informação do Rating</button>
+                    </a>
+                {% else %}
+                    <p Nao tens autozizaçao para aditar o post não é teu</p>
+                {% endif %}
+                <p></p>
+                <a href="{% url 'blogapp:apaga_rating' rating.id %}">
+                    <button>Apagar Rating</button>
+                </a>
+            {% endif %}
+
+
+        </div>
+
+
+    {% endfor %}
+    <p>_____________</p>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'blogapp:novo_rating' post.id %}">
+            <button>Inserir novo Rating</button>
+        </a>
+    {% endif %}
+{% endblock %}

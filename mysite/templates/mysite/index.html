@@ -1,0 +1,25 @@
+{% extends 'mysite/layout.html' %}
+
+{% block content %}
+    <section class="intro">
+            <div class="card">
+                {% load static %}
+                <img src="{% static 'mysite/foto.jpg' %}">
+                <h2>Ricardo Borges</h2>
+                <p>Aluno de Engenharia Informatica</p>
+                <hr class="small-hr">
+                <i class='bx bxl-linkedin-square'></i>
+                <a href="https://www.linkedin.com/in/ricardo-borges-302547267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="welcome-text">
+                <h2>Bem vindo</h2>
+
+                <p>Estou a estudar na Universidade Lusófona, no curso de engenharia informática, porque gosto de programar e tenho interesse em desenvolver os meus conhecimentos nesta área.
+
+                    Tenho facilidade em aprender coisas novas e adaptar-me rapidamente. Durante a minha vida já viajei por diversos países, porque gosto de viajar e conhecer outras culturas.
+
+                    O facto de ter frequentado diversas escolas em Portugal e  ter também estudado em Espanha durante o meu período académico, fez-me desenvolver diversas capacidades como, adaptar-me rapidamente a novos ambientes e conhecer pessoas novas.</p>
+                <a href="{% url 'mainSite:CV' %}" class="button-CV">CV</a>
+            </div>
+        </section>
+{% endblock %}

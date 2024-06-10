@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Bandas</title>
+        <style>
+            body {
+                background: #87CEFA;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Bandas</h1>
+            <a href="{% url 'imagesApp:home' %}"><button>Home</button></a>
+
+
+        </header>
+
+        <main>
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+        <footer>
+            <p>Universidade Lusófona, a22203987</p>
+        </footer>
+    </body>
+</html>

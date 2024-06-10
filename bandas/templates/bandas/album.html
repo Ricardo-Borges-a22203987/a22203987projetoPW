@@ -1,0 +1,65 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h3>{{ album }}</h3>
+    <div class="cover-box">
+        {%if album.foto_Album%}
+            <img src="{{ album.foto_Album.url }}" width="200px" class="cover">
+        {% else %}
+            <h4>{{ album }} foto not found</h4>
+        {% endif %}
+    </div>
+
+
+
+    <p> Ano de lançamento: {{ album.ano_lancamento }} </p>
+    <br>
+    <p>Existem {{ album.musicas.all|length }} musicas em {{album}}:</p>
+    <br>
+
+    {% for musica in album.musicas.all %}
+        <a href="{% url 'bandasapp:musica' musica.id %}" class="box-link">
+            <div class="box-no-icon">
+                <div class="content">
+                    <div class="title">{{ musica.titulo }}</div>
+                    <div class="mapper">{{ musica.duracao }}</div>
+                </div>
+
+                {% if musica.letra %}
+                    <div class="play-count">
+                        <i class='bx bx-font'></i><i class='bx bx-check'></i>
+                    </div>
+                {% endif %}
+
+            </div>
+
+        </a>
+
+    {% endfor %}
+
+
+
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'bandasapp:novo_musica' album.id %}">
+            <button class="styled-button">Inserir nova Musica</button>
+        </a>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'bandasapp:edita_album' album.id %}">
+            <button class="styled-button" >Editar Album</button>
+        </a>
+    {% endif %}
+
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'bandasapp:apaga_album' album.id %}">
+            <button class="styled-button-delete">Apagar Album e Musicas</button>
+        </a>
+    {% endif %}
+
+
+
+
+{% endblock %}

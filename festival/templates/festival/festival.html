@@ -1,0 +1,12 @@
+{% extends 'festival/layout.html' %}
+
+{% block content %}
+    <h2>{{ festival }}</h2>
+    <p>bandas:</p>
+    <ul>
+    {% for banda in festival.bandas.all %}
+        <p>{{ banda }}</p>
+
+    {% endfor %}
+    </ul>
+{% endblock %}

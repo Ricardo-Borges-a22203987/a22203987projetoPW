@@ -1,0 +1,18 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <p>Lista de Bandas do género "{{genero}}":</p>
+    <ul>
+    {% for banda in bandas %}
+        <a href="{% url 'bandasapp:banda' banda.id %}" class="box-link">
+            <div class="box">
+                <img src="{{ banda.foto_banda.url }}" alt="Icon" class="icon">
+                <div class="content">
+                    <div class="title">{{ banda.nome }}</div>
+                    <div class="mapper">{{ banda.genero }}</div>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+    </ul>
+{% endblock %}

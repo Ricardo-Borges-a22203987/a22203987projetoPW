@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Ricardo Borges - CV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mysite/CV.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="foto">
+                {% load static %}
+                <img src="{% static 'mysite/foto.jpg' %}">
+
+            </div>
+            <div class="header-info">
+                <h1>Ricardo Borges</h1>
+            </div>
+        </header>
+        <nav class="navbar">
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <div class="icon-text">
+                        rmfb2004@gmail.com<i class='bx bxs-envelope'></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-text">
+                        Lisbon, Portugal<i class='bx bxs-map'></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-text">
+                        964567057<i class='bx bxs-phone'></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div class="left-section">
+                <div class="box">
+                    <h1>Perfil</h1>
+                    <p>Estou a estudar na Universidade Lusófona, no curso de engenharia informática, porque gosto de programar e tenho interesse em desenvolver os meus conhecimentos nesta área.
+
+                        Tenho facilidade em aprender coisas novas e adaptar-me rapidamente. Durante a minha vida já viajei por diversos países, porque gosto de viajar e conhecer outras culturas.
+
+                        O facto de ter frequentado diversas escolas em Portugal e  ter também estudado em Espanha durante o meu período académico, fez-me desenvolver diversas capacidades como, adaptar-me rapidamente a novos ambientes e conhecer pessoas novas.</p>
+                </div>
+                <div class="box">
+                    <h1>Educação</h1>
+                    <p>12 Ano, Colégio Guadalupe</p>
+                    <p>Engenharia Imformatica, Universidade Lusófona de Humanidades e Tecnologia, Lisboa</p>
+
+                </div>
+                <div class="box">
+                    <h1>Prémios</h1>
+                    <p class="text-paragrafos">Cody-23, Universidade Lusófona DE Humanidades e Tecnologias.
+                        Primeiro lugar no concurso de programação entre os alunos do primeiro ano de Engenharia informática
+                    </p>
+                    <p class="text-paragrafos">Cody-24, Universidade Lusófona DE Humanidades e Tecnologias.
+                        Primeiro lugar no concurso de programação entre todos os alunos de Engenharia informática
+                    </p>
+                </div>
+                <div class="box">
+                    <h1>Eventos</h1>
+                    <p class="text-paragrafos">TecWeb 2023-2024, Universidade Lusófona DE Humanidades e Tecnologias.
+                        Participei nas sessões de workshops e apresentações técnicas da "Academias Lusófona"
+                    </p>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="box-d">
+                    <h1>Ligações</h1>
+                    <p class="p-direita text-paragrafos">Linkdin </p>
+                </div>
+                <div class="box-d">
+                    <h1>Competencias</h1>
+                    <p class="text-paragrafos p-direita">Ability to work in a team
+                        Critical thinking and problem solving
+                        Adaptability
+                    </p>
+
+                </div>
+                <div class="box-d">
+                    <h1>Linguas</h1>
+                <p class="text-paragrafos p-direita">Portugues
+                    <i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bxs-card'></i>
+                    Espanhol
+                    <i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bx-card'></i><i class='bx bx-card'></i>
+                    Inglês
+                    <i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bxs-card'></i><i class='bx bx-card'></i>
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
